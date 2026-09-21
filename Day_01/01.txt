@@ -1,1 +1,53 @@
-indrajith h b
+Fast API Based Application Development worshop
+
+frontEnd -> Backend -> Database
+(React)
+
+
+
+There are two database sources
+    1. SQL (RDBMS)
+        database - table row
+
+        nested data will be in many using the relationship foreigh key
+
+    2. No SQL - No only SQL - Mongo Database    
+        database - collection of documents
+
+        document - hierarchical is nested
+
+Installed Mongo DB Server - collection  
+    - Setup Mongo shell to work with mongoDB
+
+
+To list databases:
+$ show dbs 
+$ show databases
+
+To create database if does not exist:  or To select database if  exit
+$ use student_app_db
+
+To add the 'student' document to student_app_db
+$ db.students.insertone({name: "Indrajith H B",age:20,course:'CSE',sem:2})
+
+To list student documents:
+$ db.students.find()
+
+To add the 'students' document to student_app_db
+$ db.students.insertMany([
+    {name:"Rama",age:20,course:'CSE',sem:3}
+    {name:"Indru",age:20,course:'CSE',sem:3}
+])
+
+To quary document by id:
+$ db.students.insertone({_id: ObjectId('6ab0dfbf5c7c68cf83392db6')})
+
+To filter / query by name:
+$ db.students.findOne({name: "Indrajith})
+
+To filter using method:
+$ db.students.find({course:'CSE'})
+
+TO change the proprity of any atrubut :
+$ db.students.updataOne({name:"Indrajith},{$set: {age:21}}) 
+

@@ -1,0 +1,31 @@
+sion 3:
+    Setup the mongo server, mongo shell.
+    Experimented CRUD ops with mongo db on students data. 
+
+    tickets: title, description, category, status #, assigned_to, resolved_by 
+    users: username, password, role 
+    Customer Indrajith raising the complaint to the support team 'DAMAGED_ITEM.
+    TL Kaushik assigns the ticket raised by Indrajith Support Agent Lochan.
+    Support team lead assign tickets is assign/reassign 
+    Admin will create Indrajith, Kaushik, and Lochan users. 
+
+1. Create mongo database 'it_service_desk_db'
+use it_service_desk_db
+2. Add four users Admin, Indrajith, Kaushik, anb Lochan
+db.users.insertMany( [
+    {username: "Admin", password: "admin123", role:"admin"},
+    {username: "Indrajith", password: "indrajith123", role:"Customer"},
+    {username: "Kaushik", password: "kaushik123", role:"team_lead"},
+    {username: "Lochan", password: "lochani123", role:"support_agent"}
+])
+db.users.find()
+3. Indrajith will create the ticket 
+db.tickets.insertOne({title:'Screen damage', description: 'display is no resulation',
+  category:'Hardware', status:'NEW'})
+db.tickets.find()
+4. Kaushik assigns the ticket to Ganavi
+db.tickets.updateOne({_id:ObjectId("6ab100b75c7c68cf83392dc1")}, {$set:{status:"ASSIGNED"}})
+db.tickets.find()
+5. Ganavi will update the issue resolution status 
+db.tickets.updateOne({_id:ObjectId("???")}, {$set:{status:"RESOLVED"}})
+db.tickets.find()
