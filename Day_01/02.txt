@@ -23,9 +23,9 @@ db.users.find()
 db.tickets.insertOne({title:'Screen damage', description: 'display is no resulation',
   category:'Hardware', status:'NEW'})
 db.tickets.find()
-4. Kaushik assigns the ticket to Ganavi
+4. Kaushik assigns the ticket to Lochan
 db.tickets.updateOne({_id:ObjectId("6ab100b75c7c68cf83392dc1")}, {$set:{status:"ASSIGNED"}})
 db.tickets.find()
-5. Ganavi will update the issue resolution status 
+5. Lochan will update the issue resolution status 
 db.tickets.updateOne({_id:ObjectId("???")}, {$set:{status:"RESOLVED"}})
 db.tickets.find()
