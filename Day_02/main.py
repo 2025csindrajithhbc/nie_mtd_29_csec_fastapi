@@ -44,14 +44,14 @@ def ticket_creat(ticket_payload :TicketCreat):
     db[new_id] = {"id" : new_id, **ticket_payload.model_dump()}
     return db[new_id]
 
-@app.put("/ticket/{id}", response_model=TicketResponse)
-def tickets_update(id : int,payload : TicketCreat):
+@app.put("/tickets/{id}", response_model=TicketResponse)
+def tickets_update(id : int,ticket_payload : TicketCreat):
     if id not in db:
         raise HTTPException(detail="Ticket Not found" , status_code=404)
-    db[id] = {"id" :id , **payload.model_dump()}
+    db[id] = {"id" :id , **ticket_payload.model_dump()}
     return db[id]
 
-@app.delete("/ticket/{id}")
+@app.delete("/tickets/{id}")
 def tickets_delete(id : int):
     if id not in db:
         raise HTTPException(detail="Ticket Not found",status_code=404)
