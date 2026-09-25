@@ -1,0 +1,50 @@
+to validte the html form -> Js
+
+SPA - single page Application - Frameworks
+    - to make web page as Application   
+    examples : Reat JS , Angular , Vus JS
+
+    React JS - 
+        JSX = JS + XML (HTML)
+
+    Nods JS based frontend Framework
+    Nods JS based UI Framework
+
+    Vite template / starter
+
+    npm create vite@latest my-vue-app -- --template vue
+
+    npm create vite@latest calc_app -- --template react
+
+     npm create vite@latest calc_app -- --template react
+Need to install the following packages:
+create-vite@9.2.1
+Ok to proceed? (y) y
+
+> npx
+> create-vite calc_app --template react
+
+│
+◇  Which linter to use?
+│  ESLint
+│
+◇  Install with npm and start now?
+│  No
+│
+◇  Scaffolding project in C:\Users\indru\OneDrive\Documents\GitHub\nie_mtd_29_csec_fastapi\Day_04\New folder\calc_app...
+│
+└  Done. Now run:
+
+  cd calc_app
+  npm install
+  npm run dev
+
+
+  Steo the react app is running in the browser
+
+How react will 
+
+  when we give the url of the react app server :
+  1. The index.html will be loaded first
+  2. main.jsx will be loaded for index.html
+        -entry 
